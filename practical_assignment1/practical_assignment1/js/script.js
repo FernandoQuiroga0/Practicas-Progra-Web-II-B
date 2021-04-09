@@ -30,6 +30,11 @@
                 }
             }
         }
+        $scope.deleteAttraction = (id) => {
+            let p = $scope.productsChosen.length;
+                        $scope.productsChosen.splice(id-1,1);
+                        $scope.productsChosen.splice(p-1,1)
+        }
 
         $scope.addAttraction = (attraction) => {
 
@@ -59,11 +64,7 @@
             }
         }
 
-        $scope.deleteAttraction = (id) => {
-            let p = $scope.productsChosen.length;
-                        $scope.productsChosen.splice(id-1,1);
-                        $scope.productsChosen.splice(p-1,1)
-        }
+        
     });
 
 }());
